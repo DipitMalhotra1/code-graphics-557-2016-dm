@@ -33,8 +33,6 @@
 using namespace std;
 
 
-
-
 static const string vs_string =
 "#version 410 core                                                 \n"
 "                                                                   \n"
@@ -100,10 +98,9 @@ unsigned int vboID[4];
  */
 unsigned int createTriangleStripModel(void)
 {
-    // use the vertex array object vaoID[0] for this model representation
 
     unsigned int vboID[2];
-    float* vertices = new float[162];  // Vertices for our square
+    float* vertices = new float[162];  // Vertices for our trianglestrips
     float *colors = new float[162];
 
     vertices[0] = 0.0; vertices[1] = 0.0; vertices[2] = 0.0;
@@ -274,35 +271,32 @@ unsigned int createTriangleStripModel(void)
     colors[159] = 1.0; colors[160] = 1.0; colors[161] = 1.0;
     
     
-    glGenVertexArrays(2, &vaoID[0]); // Create our Vertex Array Object
-    glBindVertexArray(vaoID[0]); // Bind our Vertex Array Object so we can use it
+    glGenVertexArrays(2, &vaoID[0]);
+    glBindVertexArray(vaoID[0]);
 
 
-    glGenBuffers(2, vboID); // Generate our Vertex Buffer Object
+    glGenBuffers(2, vboID);
 
     // vertices
-    glBindBuffer(GL_ARRAY_BUFFER, vboID[0]); // Bind our Vertex Buffer Object
-    glBufferData(GL_ARRAY_BUFFER, 162 * sizeof(GLfloat), vertices, GL_STATIC_DRAW); // Set the size and data of our VBO and set it to STATIC_DRAW
+    glBindBuffer(GL_ARRAY_BUFFER, vboID[0]);
+    glBufferData(GL_ARRAY_BUFFER, 162 * sizeof(GLfloat), vertices, GL_STATIC_DRAW);
 
-    glVertexAttribPointer((GLuint)0, 3, GL_FLOAT, GL_FALSE, 0, 0); // Set up our vertex attributes pointer
-    glEnableVertexAttribArray(0); // Disable our Vertex Array Object
+    glVertexAttribPointer((GLuint)0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+    glEnableVertexAttribArray(0);
 
 
     //Color
-    glBindBuffer(GL_ARRAY_BUFFER, vboID[1]); // Bind our second Vertex Buffer Object
-    glBufferData(GL_ARRAY_BUFFER, 162 * sizeof(GLfloat), colors, GL_STATIC_DRAW); // Set the size and data of our VBO and set it to STATIC_DRAW
+    glBindBuffer(GL_ARRAY_BUFFER, vboID[1]);
+    glBufferData(GL_ARRAY_BUFFER, 162 * sizeof(GLfloat), colors, GL_STATIC_DRAW);
 
-    glVertexAttribPointer((GLuint)1, 3, GL_FLOAT, GL_FALSE, 0, 0); // Set up our vertex attributes pointer
-    glEnableVertexAttribArray(1); // Enable the second vertex attribute array
+    glVertexAttribPointer((GLuint)1, 3, GL_FLOAT, GL_FALSE, 0, 0);
+    glEnableVertexAttribArray(1);
 
-    glBindVertexArray(0); // Disable our Vertex Buffer Object
-
-
-    delete [] vertices; // Delete our vertices from memory
+    glBindVertexArray(0);
 
 
-    //TODO:
-//    vaoID[0];
+    delete [] vertices;
+
 
     return 1;
 }
@@ -310,15 +304,259 @@ unsigned int createTriangleStripModel(void)
 /*!
  ADD YOUR CODE TO CREATE A MODEL USING PRIMITIVES OF YOUR CHOISE TO THIS FUNCTION
  */
-//unsigned int createPolygonModel(void)
-//{
-//    // use the vertex array object vaoID[1] for this model representation
-//
-//    //TODO:
-//    vaoID[1];
-//
-//    return 1;
-//}
+unsigned int createPolygonModel(void)
+{
+    unsigned int vboID[2];
+    float* vertices = new float[162];  // Vertices for polygon
+    float *colors = new float[162];
+
+    vertices[0] = 0.0; vertices[1] = 0.0; vertices[2] = 0.0;
+    colors[0] = 0.0; colors[1] = 0.0; colors[2] = 0.0;
+    
+    vertices[3] = 0.0; vertices[4] = 1.0; vertices[5] = 0.0;
+    colors[3] = 0.0; colors[4] = 0.0; colors[5] = 0.0;
+    
+    vertices[6] = 1.0; vertices[7] = 0.0; vertices[8] = 0;
+    colors[6] = 0.0; colors[7] = 0.0; colors[8] = 0.0;
+    
+    vertices[9] = 1.0; vertices[10] = 1.0; vertices[11] = 0.0;
+    colors[9] = 0.0; colors[10] = 0.0; colors[11] = 0.0;
+    //
+    
+    vertices[12] = 1.0; vertices[13] = 0.0; vertices[14] = -2.0;
+    colors[12] = 1.0; colors[13] = 1.0; colors[14] = 1.0;
+    
+    
+    vertices[15] = 1.0; vertices[16] = 1.0; vertices[17] = -2.0;
+    colors[15] = 1.0; colors[16] = 1.0; colors[17] = 1.0;
+    
+    //
+
+    vertices[18] = 3.0; vertices[19] = 0.0; vertices[20] = -2.0;
+    colors[18] = 0.0; colors[19] = 0.0; colors[20] = 0.0;
+    
+    
+    vertices[21] = 3.0; vertices[22] = 1.0; vertices[23] = -2.0;
+    colors[21] = 0.0; colors[22] = 0.0; colors[23] = 0.0;
+    
+    
+
+    vertices[24] = 3.0; vertices[25] = 0.0; vertices[26] = -3.0;
+    colors[24] = 0.0; colors[25] = 1.0; colors[26] = 1.0;
+    
+    
+    vertices[27] = 3.0; vertices[28] = 1.0; vertices[29] = -3.0;
+    colors[27] = 0.0; colors[28] = 1.0; colors[29] = 1.0;
+    
+    //
+    
+    vertices[30] = 1.0; vertices[31] = 0.0; vertices[32] = -3.0;
+    colors[30] = 0.0; colors[31] = 1.0; colors[32] = 1.0;
+    
+    
+    vertices[33] = 1.0; vertices[34] = 1.0; vertices[35] = -3.0;
+    colors[33] = 0.0; colors[34] = 1.0; colors[35] = 1.0;
+    
+    
+    
+    vertices[36] = 0.0; vertices[37] = 0.0; vertices[38] = -3.0;
+    colors[36] = 0.0; colors[37] = 0.0; colors[38] = 1.0;
+    
+    vertices[39] = 0.0; vertices[40] = 1.0; vertices[41] = -3.0;
+    colors[39] = 0.0; colors[40] = 0.0; colors[41] = 1.0;
+    //
+    
+    
+    vertices[42] = 0.0; vertices[43] = 0.0; vertices[44] = -2.0;
+    colors[42] = 1.0; colors[43] = 0.0; colors[44] = 1.0;
+    
+    vertices[45] = 0.0; vertices[46] = 1.0; vertices[47] = -2.0;
+    colors[45] = 1.0; colors[46] = 0.0; colors[47] = 1.0;
+    
+    //
+    
+    vertices[48] = 0.0; vertices[49] = 0.0; vertices[50] = 0.0;
+    colors[48] = 0.0; colors[49] = 1.0; colors[50] =1.0;
+    
+    vertices[51] = 0.0; vertices[52] = 1.0; vertices[53] = 0.0;
+    colors[51] = 0.0; colors[52] = 1.0; colors[53] = 1.0;
+    
+    //
+    
+    vertices[54] = 0.0; vertices[55] = 1.0; vertices[56] = -2.0;
+    colors[54] = 0.0; colors[55] = 1.0; colors[56] = 1.0;
+    
+    vertices[57] = 1.0; vertices[58] = 0.0; vertices[59] = 0.0;
+    colors[57] = 0.0; colors[58] = 1.0; colors[59] = 1.0;
+    
+    //
+    
+    vertices[60] = 1.0; vertices[61] = 1.0; vertices[62] = -2.0;
+    colors[60] = 0.0; colors[61] = 1.0; colors[62] = 1.0;
+    
+    vertices[63] = 0.0; vertices[64] = 1.0; vertices[65] = -2.0;
+    colors[63] = 0.0; colors[64] = 1.0; colors[65] = 1.0;
+    
+    
+    //
+    vertices[66] = 1.0; vertices[67] = 2.0; vertices[68] = -2.0;
+    colors[66] = 1.0; colors[67] = 0.0; colors[68] = 1.0;
+    
+    vertices[69] = 0.0; vertices[70] = 2.0; vertices[71] = -2.0;
+    colors[69] = 1.0; colors[70] = 0.0; colors[71] = 1.0;
+    
+    //
+    
+    vertices[72] = 1.0; vertices[73] = 2.0; vertices[74] = -3.0;
+    colors[72] = 0.0; colors[73] = 1.0; colors[74] = 1.0;
+    
+    vertices[75] = 0.0; vertices[76] = 2.0; vertices[77] = -3.0;
+    colors[75] = 0.0; colors[76] = 1.0; colors[77] = 1.0;
+    
+    
+    //
+    
+    
+    vertices[78] = 1.0; vertices[79] = 1.0; vertices[80] = -3.0;
+    colors[78] = 1.0; colors[79] = 0.0; colors[80] = 1.0;
+    
+    vertices[81] = 0.0; vertices[82] = 1.0; vertices[83] = -3.0;
+    colors[81] = 1.0; colors[82] = 0.0; colors[83] = 1.0;
+    
+    
+    //
+    
+    vertices[84] = 0.0; vertices[85] = 0.0; vertices[86] = -3.0;
+    colors[84] = 0.0; colors[85] = 0.0; colors[86] = 0.0;
+    
+    vertices[87] = 0.0; vertices[88] = 1.0; vertices[89] = -2.0;
+    colors[87] = 0.0; colors[88] = 0.0; colors[89] = 0.0;
+    
+    //
+    
+    vertices[90] = 0.0; vertices[91] = 1.0; vertices[92] = -3.0;
+    colors[90] = 1.0; colors[91] = 0.0; colors[92] = 1.0;
+    
+    vertices[93] = 0.0; vertices[94] = 2.0; vertices[95] = -2.0;
+    colors[93] = 1.0; colors[94] = 0.0; colors[95] = 1.0;
+    
+    //
+    
+    vertices[96] = 0.0; vertices[97] = 2.0; vertices[98] = -3.0;
+    colors[96] = 1.0; colors[97] = 1.0; colors[98] = 1.0;
+    
+    vertices[99] = 1.0; vertices[100] = 2.0; vertices[101] = -2.0;
+    colors[99] = 1.0; colors[100] = 1.0; colors[101] = 1.0;
+    
+    
+    //
+    vertices[102] = 1.0; vertices[103] = 2.0; vertices[104] = -3.0;
+    colors[102] = 0.0; colors[103] = 1.0; colors[104] = 0.0;
+    
+    vertices[105] = 3.0; vertices[106] = 1.0; vertices[107] = -2.0;
+    colors[105] = 0.0; colors[106] = 1.0; colors[107] = 0.0;
+    //
+    
+    vertices[108] = 3.0; vertices[109] = 1.0; vertices[110] = -3.0;
+    colors[108] = 1.0; colors[109] = 0.0; colors[110] = 1.0;
+    
+    vertices[111] = 1.0; vertices[112] = 2.0; vertices[113] = -3.0;
+    colors[111] = 1.0; colors[112] = 0.0; colors[113] = 1.0;
+    
+    //
+    
+    vertices[114] = 1.0; vertices[115] = 1.0; vertices[116] = -3.0;
+    colors[114] = 1.0; colors[115] = 1.0; colors[116] = 0.0;
+    
+    vertices[117] = 1.0; vertices[118] = 2.0; vertices[119] = -2.0;
+    colors[117] = 1.0; colors[118] = 1.0; colors[119] = 0.0;
+    
+    
+    //
+    vertices[120] = 1.0; vertices[121] = 1.0; vertices[122] = -2.0;
+    colors[120] = 0.0; colors[121] = 1.0; colors[122] = 1.0;
+    
+    vertices[123] = 3.0; vertices[124] = 1.0; vertices[125] = -2.0;
+    colors[123] = 1.0; colors[124] = 1.0; colors[125] = 1.0;
+    
+    //
+    
+    
+    vertices[126] = 1.0; vertices[127] = 0.0; vertices[128] = -2.0;
+    colors[126] = 0.0; colors[127] = 1.0; colors[128] = 1.0;
+    
+    vertices[129] = 3.0; vertices[130] = 0.0; vertices[131] = -2.0;
+    colors[129] = 0.0; colors[130] = 1.0; colors[131] = 1.0;
+    
+    //
+    
+    vertices[132] = 1.0; vertices[133] = 0.0; vertices[134] = -3.0;
+    colors[132] = 1.0; colors[133] = 0.0; colors[134] = 1.0;
+    
+    vertices[135] = 3.0; vertices[136] = 0.0; vertices[137] = -3.0;
+    colors[135] = 1.0; colors[136] = 0.0; colors[137] = 1.0;
+    //
+    
+    
+    vertices[138] = 1.0; vertices[139] = 0.0; vertices[140] = -2.0;
+    colors[138] = 0.0; colors[139] = 0.0; colors[140] = 1.0;
+    
+    vertices[141] = 1.0; vertices[142] = 0.0; vertices[143] = -3.0;
+    colors[141] = 0.0; colors[142] = 0.0; colors[143] = 1.0;
+    //
+    
+    
+    vertices[144] = 0.0; vertices[145] = 0.0; vertices[146] = -2.0;
+    colors[144] = 0.0; colors[145] = 0.0; colors[146] = 0.0;
+    
+    vertices[147] = 0.0; vertices[148] = 0.0; vertices[149] = -3.0;
+    colors[147] = 0.0; colors[148] = 0.0; colors[149] = 0.0;
+    //
+    
+    
+    vertices[150] = 1.0; vertices[151] = 0.0; vertices[152] = -2.0;
+    colors[150] = 1.0; colors[151] = 1.0; colors[152] = 1.0;
+    
+    vertices[153] = 0.0; vertices[154] = 0.0; vertices[155] = -2.0;
+    colors[153] = 1.0; colors[154] = 1.0; colors[155] = 1.0;
+    //
+    
+    vertices[156] = 1.0; vertices[157] = 0.0; vertices[158] = 0.0;
+    colors[156] = 1.0; colors[157] = 0.0; colors[158] = 1.0;
+    
+    vertices[159] = 0.0; vertices[160] = 0.0; vertices[161] = 0.0;
+    colors[159] = 1.0; colors[160] = 0.0; colors[161] = 1.0;
+    
+    
+    glGenVertexArrays(2, &vaoID[0]);
+    glBindVertexArray(vaoID[0]);
+    
+    
+    glGenBuffers(2, vboID);
+    
+    // vertices
+    glBindBuffer(GL_ARRAY_BUFFER, vboID[0]);
+    glBufferData(GL_ARRAY_BUFFER, 162 * sizeof(GLfloat), vertices, GL_STATIC_DRAW);
+    
+    glVertexAttribPointer((GLuint)0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+    glEnableVertexAttribArray(0);
+    
+    
+    //Color
+    glBindBuffer(GL_ARRAY_BUFFER, vboID[1]);
+    glBufferData(GL_ARRAY_BUFFER, 162 * sizeof(GLfloat), colors, GL_STATIC_DRAW);
+    
+    glVertexAttribPointer((GLuint)1, 3, GL_FLOAT, GL_FALSE, 0, 0);
+    glEnableVertexAttribArray(1);
+    
+    glBindVertexArray(0);
+    
+    
+    delete [] vertices;
+
+
+    return 1;
+}
 
 
 
@@ -346,21 +584,21 @@ void renderTriangleStripModel(void)
 /*!
  ADD YOUR CODE TO RENDER THE TRIANGLE STRIP MODEL TO THIS FUNCTION
  */
-//void renderPolygonModel(void)
-//{
-//
-//    // Bind the buffer and switch it to an active buffer
-//    glBindVertexArray(vaoID[1]);
-//
-//
-//	// HERE: THIS CAUSES AN ERROR BECAUSE I DO NOT KNOW HOW MANY POLYGONS YOU HAVE.
-//	// COMPLETE THE LINE
-//    // Draw the triangles
-//    glDrawArrays(GL_POLYGON, ? , ?);
-//
-//    // Unbind our Vertex Array Object
-//    glBindVertexArray(0);
-//}
+void renderPolygonModel(void)
+{
+
+    // Bind the buffer and switch it to an active buffer
+    glBindVertexArray(vaoID[1]);
+
+
+	// HERE: THIS CAUSES AN ERROR BECAUSE I DO NOT KNOW HOW MANY POLYGONS YOU HAVE.
+	// COMPLETE THE LINE
+    // Draw the triangles
+    glDrawArrays(GL_POLYGON, 0 , 54);
+
+    // Unbind our Vertex Array Object
+    glBindVertexArray(0);
+}
 
 
 
@@ -371,10 +609,15 @@ void renderTriangleStripModel(void)
  This function creates the two models
  */
 void setupScene(void) {
+    
 
     createTriangleStripModel();
     renderTriangleStripModel();
+    
+    std::cout<<"\n";
 
+//    createPolygonModel();
+    renderPolygonModel();
 }
 
 
