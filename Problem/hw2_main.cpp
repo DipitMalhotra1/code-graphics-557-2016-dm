@@ -311,408 +311,408 @@ unsigned int createPolygonModel(void)
     float *colors = new float[270]; // Colors for our vertices
     
     // FRONT
-    vertices[0] = 0.0; vertices[1] = 0.0; vertices[2] = 0.0; // a(0,0,3)
-    colors[0] = 0.0; colors[1] = 0.0; colors[2] = 1.0;
+    vertices[0] = 0.0; vertices[1] = 0.0; vertices[2] = 0.0;
+    colors[0] = 1.0; colors[1] = 0.0; colors[2] = 1.0;
     
-    vertices[3] = 0.0; vertices[4] = 1.0; vertices[5] = 0.0; // d(0,1,3)
-    colors[3] = 1.0; colors[4] = 0.0; colors[5] = 0.0; // Bottom left corner
+    vertices[3] = 0.0; vertices[4] = 1.0; vertices[5] = 0.0;
+    colors[3] = 0.0; colors[4] = 0.0; colors[5] = 0.0;
     
-    vertices[6] = 1.0; vertices[7] = 0.0; vertices[8] = 0.0; // b(1,0,3)
-    colors[6] = 0.0; colors[7] = 1.0; colors[8] = 0.0; // Top Right corner
+    vertices[6] = 1.0; vertices[7] = 0.0; vertices[8] = 0.0;
+    colors[6] = 1.0; colors[7] = 1.0; colors[8] = 0.0;
     
     
     
-    vertices[9] = 0.0; vertices[10] = 1.0; vertices[11] = 0.0; // d(0,1,3)
-    colors[9] = 1.0; colors[10] = 0.0; colors[11] = 0.0; // Bottom left corner
+    vertices[9] = 0.0; vertices[10] = 1.0; vertices[11] = 0.0;
+    colors[9] = 0.0; colors[10] = 0.0; colors[11] = 0.0;
     
-    vertices[12] = 1.0; vertices[13] = 0.0; vertices[14] = 0.0; // b(1,0,3)
-    colors[12] = 0.0; colors[13] = 1.0; colors[14] = 0.0; // Top Right corner
+    vertices[12] = 1.0; vertices[13] = 0.0; vertices[14] = 0.0;
+    colors[12] = 1.0; colors[13] = 1.0; colors[14] = 0.0;
     
-    vertices[15] = 1.0; vertices[16] = 1.0; vertices[17] = 0.0; // c(1,1,3)
+    vertices[15] = 1.0; vertices[16] = 1.0; vertices[17] = 0.0;
     
-    colors[15] = 0.0; colors[16] = 0.0; colors[17] = 1.0; // Bottom right corner
+    colors[15] = 1.0; colors[16] = 0.0; colors[17] = 1.0;
     
     
     
-    vertices[18] = 1.0; vertices[19] = 0.0; vertices[20] = 0.0; // b(1,0,3)
-    colors[18] = 1.0; colors[19] = 0.0; colors[20] = 0.0; // Top Right corner
+    vertices[18] = 1.0; vertices[19] = 0.0; vertices[20] = 0.0;
+    colors[18] = 0.0; colors[19] = 0.0; colors[20] = 0.0;
     
-    vertices[21] = 1.0; vertices[22] = 1.0; vertices[23] = 0.0; // c(1,1,3)
+    vertices[21] = 1.0; vertices[22] = 1.0; vertices[23] = 0.0;
     
-    colors[21] = 0.0; colors[22] = 1.0; colors[23] = 0.0; // Bottom right corner
+    colors[21] = 1.0; colors[22] = 1.0; colors[23] = 0.0;
     
-    vertices[24] = 1.0; vertices[25] = 0.0; vertices[26] = -2.0; // g(1,0,1)
+    vertices[24] = 1.0; vertices[25] = 0.0; vertices[26] = -2.0;
     
-    colors[24] = 0.0; colors[25] = 0.0; colors[26] = 1.0; // Top right corner
+    colors[24] = 0.0; colors[25] = 0.0; colors[26] = 1.0;
     
     
     
-    vertices[27] = 1.0; vertices[28] = 0.0; vertices[29] = -2.0; // g(1,0,1)
+    vertices[27] = 1.0; vertices[28] = 0.0; vertices[29] = -2.0;
     
-    colors[27] = 1.0; colors[28] = 0.0; colors[29] = 0.0; // Top right corner
+    colors[27] = 0.0; colors[28] = 0.0; colors[29] = 0.0;
     
-    vertices[30] = 1.0; vertices[31] = 1.0; vertices[32] = 0.0; // c(1,1,3)
+    vertices[30] = 1.0; vertices[31] = 1.0; vertices[32] = 0.0;
     
-    colors[30] = 0.0; colors[31] = 1.0; colors[32] = 0.0; // Bottom right corner
+    colors[30] = 1.0; colors[31] = 1.0; colors[32] = 0.0;
     
-    vertices[33] = 1.0; vertices[34] = 1.0; vertices[35] = -2.0; // f(1,1,1)
+    vertices[33] = 1.0; vertices[34] = 1.0; vertices[35] = -2.0;
     
-    colors[33] = 0.0; colors[34] = 0.0; colors[35] = 1.0; // Bottom left corner
+    colors[33] = 1.0; colors[34] = 0.0; colors[35] = 1.0;
     
     
     
-    vertices[36] = 1.0; vertices[37] = 0.0; vertices[38] = -2.0; // g(1,0,1)
+    vertices[36] = 1.0; vertices[37] = 0.0; vertices[38] = -2.0;
     
-    colors[36] = 1.0; colors[37] = 0.0; colors[38] = 0.0; // Top right corner
+    colors[36] = 0.0; colors[37] = 0.0; colors[38] = 0.0;
     
-    vertices[39] = 1.0; vertices[40] = 1.0; vertices[41] = -2.0; // f(1,1,1)
+    vertices[39] = 1.0; vertices[40] = 1.0; vertices[41] = -2.0;
     
-    colors[39] = 0.0; colors[40] = 1.0; colors[41] = 0.0; // Bottom left corner
+    colors[39] = 1.0; colors[40] = 1.0; colors[41] = 0.0;
     
-    vertices[42] = 3.0; vertices[43] = 0.0; vertices[44] = -2.0; // i(3,0,1)
+    vertices[42] = 3.0; vertices[43] = 0.0; vertices[44] = -2.0;
     
-    colors[42] = 0.0; colors[43] = 0.0; colors[44] = 1.0; // Bottom left corner
+    colors[42] = 1.0; colors[43] = 0.0; colors[44] = 1.0;
     
     
     
-    vertices[45] = 3.0; vertices[46] = 0.0; vertices[47] = -2.0; // i(3,0,1)
+    vertices[45] = 3.0; vertices[46] = 0.0; vertices[47] = -2.0;
     
-    colors[45] = 1.0; colors[46] = 0.0; colors[47] = 0.0; // Bottom left corner
+    colors[45] = 0.0; colors[46] = 0.0; colors[47] = 0.0;
     
-    vertices[48] = 1.0; vertices[49] = 1.0; vertices[50] = -2.0; // f(1,1,1)
+    vertices[48] = 1.0; vertices[49] = 1.0; vertices[50] = -2.0;
     
-    colors[48] = 0.0; colors[49] = 1.0; colors[50] = 0.0; // Bottom left corner
+    colors[48] = 1.0; colors[49] = 1.0; colors[50] = 0.0;
     
-    vertices[51] = 3.0; vertices[52] = 1.0; vertices[53] = -2.0; // l(3,1,1)
+    vertices[51] = 3.0; vertices[52] = 1.0; vertices[53] = -2.0;
     
-    colors[51] = 0.0; colors[52] = 0.0; colors[53] = 1.0; // Bottom left corner
+    colors[51] = 1.0; colors[52] = 0.0; colors[53] = 1.0;
     
     
     
-    vertices[54] = 3.0; vertices[55] = 0.0; vertices[56] = -2.0; // i(3,0,1)
+    vertices[54] = 3.0; vertices[55] = 0.0; vertices[56] = -2.0;
     
-    colors[54] = 1.0; colors[55] = 0.0; colors[56] = 0.0; // Bottom left corner
+    colors[54] = 0.0; colors[55] = 0.0; colors[56] = 0.0;
     
-    vertices[57] = 3.0; vertices[58] = 1.0; vertices[59] = -2.0; // l(3,1,1)
+    vertices[57] = 3.0; vertices[58] = 1.0; vertices[59] = -2.0;
     
-    colors[57] = 0.0; colors[58] = 1.0; colors[59] = 0.0; // Bottom left corner
+    colors[57] = 1.0; colors[58] = 1.0; colors[59] = 0.0;
     
-    vertices[60] = 3.0; vertices[61] = 0.0; vertices[62] = -3.0; // j(3,0,0)
+    vertices[60] = 3.0; vertices[61] = 0.0; vertices[62] = -3.0;
     
-    colors[60] = 0.0; colors[61] = 0.0; colors[62] = 1.0; // Bottom left corner
+    colors[60] = 1.0; colors[61] = 0.0; colors[62] = 1.0;
     
     
     
-    vertices[63] = 3.0; vertices[64] = 0.0; vertices[65] = -3.0; // j(3,0,0)
+    vertices[63] = 3.0; vertices[64] = 0.0; vertices[65] = -3.0;
     
-    colors[63] = 1.0; colors[64] = 0.0; colors[65] = 1.0; // Bottom left corner
+    colors[63] = 0.0; colors[64] = 0.0; colors[65] = 1.0;
     
-    vertices[66] = 3.0; vertices[67] = 1.0; vertices[68] = -2.0; // l(3,1,1)
+    vertices[66] = 3.0; vertices[67] = 1.0; vertices[68] = -2.0;
     
-    colors[66] = 0.0; colors[67] = 1.0; colors[68] = 0.0; // Bottom left corner
+    colors[66] = 1.0; colors[67] = 1.0; colors[68] = 0.0;
     
-    vertices[69] = 3.0; vertices[70] = 1.0; vertices[71] = -3.0; // k(3,1,0)
+    vertices[69] = 3.0; vertices[70] = 1.0; vertices[71] = -3.0;
     
-    colors[69] = 0.0; colors[70] = 0.0; colors[71] = 1.0; // Bottom left corner
+    colors[69] = 1.0; colors[70] = 0.0; colors[71] = 1.0;
     
     
     
-    vertices[72] = 3.0; vertices[73] = 0.0; vertices[74] = -3.0; // j(3,0,0)
+    vertices[72] = 3.0; vertices[73] = 0.0; vertices[74] = -3.0;
     
-    colors[72] = 1.0; colors[73] = 0.0; colors[74] = 0.0; // Bottom left corner
+    colors[72] = 0.0; colors[73] = 0.0; colors[74] = 0.0;
     
-    vertices[75] = 3.0; vertices[76] = 1.0; vertices[77] = -3.0; // k(3,1,0)
+    vertices[75] = 3.0; vertices[76] = 1.0; vertices[77] = -3.0;
     
-    colors[75] = 0.0; colors[76] = 1.0; colors[77] = 0.0; // Bottom left corner
+    colors[75] = 1.0; colors[76] = 1.0; colors[77] = 0.0;
     
-    vertices[78] = 1.0; vertices[79] = 0.0; vertices[80] = -3.0; // n(1,0,0)
+    vertices[78] = 1.0; vertices[79] = 0.0; vertices[80] = -3.0;
     
-    colors[78] = 0.0; colors[79] = 0.0; colors[80] = 1.0; // Top left corner
+    colors[78] = 1.0; colors[79] = 0.0; colors[80] = 1.0;
     
     
     
-    vertices[81] = 3.0; vertices[82] = 1.0; vertices[83] = -3.0; // k(3,1,0)
+    vertices[81] = 3.0; vertices[82] = 1.0; vertices[83] = -3.0;
     
-    colors[81] = 1.0; colors[82] = 0.0; colors[83] = 0.0; // Bottom left corner
+    colors[81] = 0.0; colors[82] = 0.0; colors[83] = 0.0;
     
-    vertices[84] = 1.0; vertices[85] = 0.0; vertices[86] = -3.0; // n(1,0,0)
+    vertices[84] = 1.0; vertices[85] = 0.0; vertices[86] = -3.0;
     
-    colors[84] = 0.0; colors[85] = 1.0; colors[86] = 0.0; // Top left corner
+    colors[84] = 1.0; colors[85] = 1.0; colors[86] = 0.0;
     
-    vertices[87] = 1.0; vertices[88] = 1.0; vertices[89] = -3.0; // m(1,1,0)
+    vertices[87] = 1.0; vertices[88] = 1.0; vertices[89] = -3.0;
     
-    colors[87] = 0.0; colors[88] = 0.0; colors[89] = 1.0; // Bottom left corner
+    colors[87] = 1.0; colors[88] = 0.0; colors[89] = 1.0;
     
     
     
-    vertices[90] = 1.0; vertices[91] = 1.0; vertices[92] = 0.0; // c(1,1,3)
+    vertices[90] = 1.0; vertices[91] = 1.0; vertices[92] = 0.0;
     
-    colors[90] = 1.0; colors[91] = 0.0; colors[92] = 0.0; // Bottom left corner
+    colors[90] = 0.0; colors[91] = 0.0; colors[92] = 0.0;
     
-    vertices[93] = 0.0; vertices[94] = 1.0; vertices[95] = 0.0;  // d(0,1,3)
+    vertices[93] = 0.0; vertices[94] = 1.0; vertices[95] = 0.0;
     
-    colors[93] = 0.0; colors[94] = 1.0; colors[95] = 0.0; // Bottom left corner
+    colors[93] = 1.0; colors[94] = 1.0; colors[95] = 0.0;
     
-    vertices[96] = 0.0; vertices[97] = 1.0; vertices[98] = -2.0; // e(0,1,1)
+    vertices[96] = 0.0; vertices[97] = 1.0; vertices[98] = -2.0;
     
-    colors[96] = 0.0; colors[97] = 0.0; colors[98] = 1.0; // Bottom left corner
+    colors[96] = 1.0; colors[97] = 0.0; colors[98] = 1.0;
     
     
     
-    vertices[99] = 1.0; vertices[100] = 1.0; vertices[101] = 0.0; // c(1,1,3)
+    vertices[99] = 1.0; vertices[100] = 1.0; vertices[101] = 0.0;
     
-    colors[99] = 1.0; colors[100] = 0.0; colors[101] = 0.0; // Bottom left corner
+    colors[99] = 0.0; colors[100] = 0.0; colors[101] = 0.0;
     
-    vertices[102] = 0.0; vertices[103] = 1.0; vertices[104] = -2.0; // e(0,1,1)
+    vertices[102] = 0.0; vertices[103] = 1.0; vertices[104] = -2.0;
     
-    colors[102] = 0.0; colors[103] = 1.0; colors[104] = 0.0; // Bottom left corner
+    colors[102] = 1.0; colors[103] = 1.0; colors[104] = 0.0;
     
-    vertices[105] = 1.0; vertices[106] = 1.0; vertices[107] = -2.0; // f(1,1,1)
+    vertices[105] = 1.0; vertices[106] = 1.0; vertices[107] = -2.0;
     
-    colors[105] = 0.0; colors[106] = 0.0; colors[107] = 1.0; // Bottom left corner
+    colors[105] = 1.0; colors[106] = 0.0; colors[107] = 1.0;
     
     
     
-    vertices[108] = 1.0; vertices[109] = 0.0; vertices[110] = 0.0; // b(1,0,3)
+    vertices[108] = 1.0; vertices[109] = 0.0; vertices[110] = 0.0;
     
-    colors[108] = 1.0; colors[109] = 0.0; colors[110] = 0.0; // Top Right corner
+    colors[108] = 0.0; colors[109] = 0.0; colors[110] = 0.0;
     
-    vertices[111] = 0.0; vertices[112] = 0.0; vertices[113] = -3.0; // p(0,0,0)
+    vertices[111] = 0.0; vertices[112] = 0.0; vertices[113] = -3.0;
     
-    colors[111] = 0.0; colors[112] = 1.0; colors[113] = 0.0; // Top left corner
+    colors[111] = 1.0; colors[112] = 1.0; colors[113] = 0.0;
     
-    vertices[114] = 1.0; vertices[115] = 0.0; vertices[116] = -3.0; // n(1,0,0)
+    vertices[114] = 1.0; vertices[115] = 0.0; vertices[116] = -3.0;
     
-    colors[114] = 0.0; colors[115] = 0.0; colors[116] = 1.0; // Top left corner
+    colors[114] = 1.0; colors[115] = 0.0; colors[116] = 1.0;
     
     
-    vertices[117] = 1.0; vertices[118] = 0.0; vertices[119] = 0.0; // b(1,0,3)
+    vertices[117] = 1.0; vertices[118] = 0.0; vertices[119] = 0.0;
     
-    colors[117] = 1.0; colors[118] = 0.0; colors[119] = 0.0; // Top Right corner
+    colors[117] = 0.0; colors[118] = 0.0; colors[119] = 0.0;
     
-    vertices[120] = 0.0; vertices[121] = 0.0; vertices[122] = -3.0; // p(0,0,0)
+    vertices[120] = 0.0; vertices[121] = 0.0; vertices[122] = -3.0;
     
-    colors[120] = 0.0; colors[121] = 1.0; colors[122] = 0.0; // Top left corner
+    colors[120] = 1.0; colors[121] = 1.0; colors[122] = 0.0;
     
-    vertices[123] = 0.0; vertices[124] = 0.0; vertices[125] = 0.0; // a(0,0,3)
+    vertices[123] = 0.0; vertices[124] = 0.0; vertices[125] = 0.0;
     
-    colors[123] = 0.0; colors[124] = 0.0; colors[125] = 1.0; // Top left corner
+    colors[123] = 1.0; colors[124] = 0.0; colors[125] = 1.0;
     
     
-    vertices[126] = 0.0; vertices[127] = 0.0; vertices[128] = 0.0; // a(0,0,3)
+    vertices[126] = 0.0; vertices[127] = 0.0; vertices[128] = 0.0;
     
-    colors[126] = 1.0; colors[127] = 0.0; colors[128] = 0.0; // Top left corner
+    colors[126] = 0.0; colors[127] = 0.0; colors[128] = 0.0;
     
-    vertices[129] = 0.0; vertices[130] = 1.0; vertices[131] = 0.0; // d(0,1,3)
+    vertices[129] = 0.0; vertices[130] = 1.0; vertices[131] = 0.0;
     
-    colors[129] = 0.0; colors[130] = 1.0; colors[131] = 0.0; // Bottom left corner
+    colors[129] = 1.0; colors[130] = 1.0; colors[131] = 0.0;
     
-    vertices[132] = 0.0; vertices[133] = 0.0; vertices[134] = -3.0; // p(0,0,0)
+    vertices[132] = 0.0; vertices[133] = 0.0; vertices[134] = -3.0;
     
-    colors[132] = 0.0; colors[133] = 0.0; colors[134] = 1.0; // Top left corner
+    colors[132] = 1.0; colors[133] = 0.0; colors[134] = 1.0;
     
     
     
-    vertices[135] = 0.0; vertices[136] = 0.0; vertices[137] = -3.0; // p(0,0,0)
+    vertices[135] = 0.0; vertices[136] = 0.0; vertices[137] = -3.0;
     
-    colors[135] = 1.0; colors[136] = 0.0; colors[137] = 0.0; // Top left corner
+    colors[135] = 0.0; colors[136] = 0.0; colors[137] = 0.0;
     
-    vertices[138] = 0.0; vertices[139] = 1.0; vertices[140] = -3.0;  // o(0,1,0)
+    vertices[138] = 0.0; vertices[139] = 1.0; vertices[140] = -3.0;
     
-    colors[138] = 0.0; colors[139] = 1.0; colors[140] = 0.0; // Bottom left corner
+    colors[138] = 1.0; colors[139] = 1.0; colors[140] = 0.0;
     
-    vertices[141] = 0.0; vertices[142] = 1.0; vertices[143] = 0.0; // d(0,1,3)
+    vertices[141] = 0.0; vertices[142] = 1.0; vertices[143] = 0.0;
     
-    colors[141] = 0.0; colors[142] = 0.0; colors[143] = 1.0; // Bottom left corner
+    colors[141] = 1.0; colors[142] = 0.0; colors[143] = 1.0;
     
     
     
-    vertices[144] = 1.0; vertices[145] = 1.0; vertices[146] = -2.0; // f(1,1,1)
+    vertices[144] = 1.0; vertices[145] = 1.0; vertices[146] = -2.0;
     
-    colors[144] = 1.0; colors[145] = 0.0; colors[146] = 0.0; // Bottom left corner
+    colors[144] = 0.0; colors[145] = 0.0; colors[146] = 0.0;
     
-    vertices[147] = 0.0; vertices[148] = 1.0; vertices[149] = -2.0; // e(0,1,1)
+    vertices[147] = 0.0; vertices[148] = 1.0; vertices[149] = -2.0;
     
-    colors[147] = 0.0; colors[148] = 1.0; colors[149] = 0.0; // Bottom left corner
+    colors[147] = 1.0; colors[148] = 1.0; colors[149] = 0.0;
     
-    vertices[150] = 0.0; vertices[151] = 2.0; vertices[152] = -2.0; // q(0,2,1)
+    vertices[150] = 0.0; vertices[151] = 2.0; vertices[152] = -2.0;
     
-    colors[150] = 0.0; colors[151] = 0.0; colors[152] = 1.0; // Bottom left corner
+    colors[150] = 1.0; colors[151] = 0.0; colors[152] = 1.0;
     
     
     
-    vertices[153] = 0.0; vertices[154] = 2.0; vertices[155] = -2.0; // q(0,2,1)
+    vertices[153] = 0.0; vertices[154] = 2.0; vertices[155] = -2.0;
     
-    colors[153] = 1.0; colors[154] = 0.0; colors[155] = 0.0; // Bottom left corner
+    colors[153] = 0.0; colors[154] = 0.0; colors[155] = 0.0;
     
-    vertices[156] = 1.0; vertices[157] = 1.0; vertices[158] = -2.0; // f(1,1,1)
+    vertices[156] = 1.0; vertices[157] = 1.0; vertices[158] = -2.0;
     
-    colors[156] = 0.0; colors[157] = 1.0; colors[158] = 0.0; // Bottom left corner
+    colors[156] = 1.0; colors[157] = 1.0; colors[158] = 0.0;
     
-    vertices[159] = 1.0; vertices[160] = 2.0; vertices[161] = -2.0; // r(1,2,1)
+    vertices[159] = 1.0; vertices[160] = 2.0; vertices[161] = -2.0;
     
-    colors[159] = 0.0; colors[160] = 0.0; colors[161] = 1.0; // Bottom left corner
+    colors[159] = 1.0; colors[160] = 0.0; colors[161] = 1.0;
     
     
-    vertices[162] = 0.0; vertices[163] = 1.0; vertices[164] = -2.0; // e(0,1,1)
+    vertices[162] = 0.0; vertices[163] = 1.0; vertices[164] = -2.0;
     
-    colors[162] = 1.0; colors[163] = 0.0; colors[164] = 0.0; // Bottom left corner
+    colors[162] = 0.0; colors[163] = 0.0; colors[164] = 0.0;
     
-    vertices[165] = 0.0; vertices[166] = 2.0; vertices[167] = -2.0; // q(0,2,1)
+    vertices[165] = 0.0; vertices[166] = 2.0; vertices[167] = -2.0;
     
-    colors[165] = 0.0; colors[166] = 1.0; colors[167] = 0.0; // Bottom left corner
+    colors[165] = 1.0; colors[166] = 1.0; colors[167] = 0.0;
     
-    vertices[168] = 0.0; vertices[169] = 1.0; vertices[170] = -3.0; // o(0,1,0)
+    vertices[168] = 0.0; vertices[169] = 1.0; vertices[170] = -3.0;
     
-    colors[168] = 0.0; colors[169] = 0.0; colors[170] = 1.0; // Bottom left corner
+    colors[168] = 1.0; colors[169] = 0.0; colors[170] = 1.0;
     
     
     
-    vertices[171] = 0.0; vertices[172] = 2.0; vertices[173] = -2.0; // q(0,2,1)
+    vertices[171] = 0.0; vertices[172] = 2.0; vertices[173] = -2.0;
     
-    colors[171] = 0.0; colors[172] = 1.0; colors[173] = 0.0; // Bottom left corner
+    colors[171] = 1.0; colors[172] = 1.0; colors[173] = 0.0;
     
-    vertices[174] = 0.0; vertices[175] = 1.0; vertices[176] = -3.0; // o(0,1,0)
+    vertices[174] = 0.0; vertices[175] = 1.0; vertices[176] = -3.0;
     
-    colors[174] = 0.0; colors[175] = 1.0; colors[176] = 0.0; // Bottom left corner
+    colors[174] = 1.0; colors[175] = 1.0; colors[176] = 0.0;
     
-    vertices[177] = 0.0; vertices[178] = 2.0; vertices[179] = -3.0; // t(0,2,0)
+    vertices[177] = 0.0; vertices[178] = 2.0; vertices[179] = -3.0;
     
-    colors[177] = 0.0; colors[178] = 0.0; colors[179] = 1.0; // Bottom left corner
+    colors[177] = 1.0; colors[178] = 0.0; colors[179] = 1.0;
     
     
-    vertices[180] = 0.0; vertices[181] = 1.0; vertices[182] = -3.0; // o(0,1,0)
+    vertices[180] = 0.0; vertices[181] = 1.0; vertices[182] = -3.0;
     
-    colors[180] = 1.0; colors[181] = 0.0; colors[182] = 0.0; // Bottom left corner
+    colors[180] = 0.0; colors[181] = 0.0; colors[182] = 0.0;
     
-    vertices[183] = 0.0; vertices[184] = 2.0; vertices[185] = -3.0; // t(0,2,0)
+    vertices[183] = 0.0; vertices[184] = 2.0; vertices[185] = -3.0;
     
-    colors[183] = 0.0; colors[184] = 1.0; colors[185] = 0.0; // Bottom left corner
+    colors[183] = 1.0; colors[184] = 1.0; colors[185] = 0.0;
     
-    vertices[186] = 1.0; vertices[187] = 1.0; vertices[188] = -3.0; // m(1,1,0)
+    vertices[186] = 1.0; vertices[187] = 1.0; vertices[188] = -3.0;
     
-    colors[186] = 0.0; colors[187] = 0.0; colors[188] = 1.0; // Bottom left corner
+    colors[186] = 1.0; colors[187] = 0.0; colors[188] = 1.0;
     
     
-    vertices[189] = 0.0; vertices[190] = 2.0; vertices[191] = -3.0; // t(0,2,0)
+    vertices[189] = 0.0; vertices[190] = 2.0; vertices[191] = -3.0;
     
-    colors[189] = 1.0; colors[190] = 0.0; colors[191] = 0.0; // Bottom left corner
+    colors[189] = 0.0; colors[190] = 0.0; colors[191] = 0.0;
     
-    vertices[192] = 1.0; vertices[193] = 1.0; vertices[194] = -3.0; // m(1,1,0)
+    vertices[192] = 1.0; vertices[193] = 1.0; vertices[194] = -3.0;
     
-    colors[192] = 0.0; colors[193] = 1.0; colors[194] = 0.0; // Bottom left corner
+    colors[192] = 1.0; colors[193] = 1.0; colors[194] = 0.0;
     
-    vertices[195] = 1.0; vertices[196] = 2.0; vertices[197] = -3.0; // s(1,2,0)
+    vertices[195] = 1.0; vertices[196] = 2.0; vertices[197] = -3.0;
     
-    colors[195] = 0.0; colors[196] = 0.0; colors[197] = 1.0; // Bottom left corner
+    colors[195] = 1.0; colors[196] = 0.0; colors[197] = 1.0;
     
     
-    vertices[198] = 0.0; vertices[199] = 2.0; vertices[200] = -2.0; // q(0,2,1)
+    vertices[198] = 0.0; vertices[199] = 2.0; vertices[200] = -2.0;
     
-    colors[198] = 1.0; colors[199] = 0.0; colors[200] = 0.0; // Bottom left corner
+    colors[198] = 0.0; colors[199] = 0.0; colors[200] = 0.0;
     
-    vertices[201] = 0.0; vertices[202] = 2.0; vertices[203] = -3.0; // t(0,2,0)
+    vertices[201] = 0.0; vertices[202] = 2.0; vertices[203] = -3.0;
     
-    colors[201] = 0.0; colors[202] = 1.0; colors[203] = 0.0; // Bottom left corner
+    colors[201] = 1.0; colors[202] = 1.0; colors[203] = 0.0;
     
-    vertices[204] = 1.0; vertices[205] = 2.0; vertices[206] = -2.0; // r(1,2,1)
+    vertices[204] = 1.0; vertices[205] = 2.0; vertices[206] = -2.0;
     
-    colors[204] = 0.0; colors[205] = 0.0; colors[206] = 1.0; // Bottom left corner
+    colors[204] = 1.0; colors[205] = 0.0; colors[206] = 1.0;
     
     
     
-    vertices[207] = 0.0; vertices[208] = 2.0; vertices[209] = -3.0; // t(0,2,0)
+    vertices[207] = 0.0; vertices[208] = 2.0; vertices[209] = -3.0;
     
-    colors[207] = 1.0; colors[208] = 0.0; colors[209] = 0.0; // Bottom left corner
+    colors[207] = 0.0; colors[208] = 0.0; colors[209] = 0.0;
     
-    vertices[210] = 1.0; vertices[211] = 2.0; vertices[212] = -2.0; // r(1,2,1)
+    vertices[210] = 1.0; vertices[211] = 2.0; vertices[212] = -2.0;
     
-    colors[210] = 0.0; colors[211] = 1.0; colors[212] = 0.0; // Bottom left corner
+    colors[210] = 1.0; colors[211] = 1.0; colors[212] = 0.0;
     
-    vertices[213] = 1.0; vertices[214] = 2.0; vertices[215] = -3.0; // s(1,2,0)
+    vertices[213] = 1.0; vertices[214] = 2.0; vertices[215] = -3.0;
     
-    colors[213] = 0.0; colors[214] = 0.0; colors[215] = 1.0; // Bottom left corner
+    colors[213] = 1.0; colors[214] = 0.0; colors[215] = 1.0;
     
     
-    vertices[216] = 1.0; vertices[217] = 1.0; vertices[218] = -2.0; // f(1,1,1)
+    vertices[216] = 1.0; vertices[217] = 1.0; vertices[218] = -2.0;
     
-    colors[216] = 1.0; colors[217] = 0.0; colors[218] = 0.0; // Bottom left corner
+    colors[216] = 0.0; colors[217] = 0.0; colors[218] = 0.0;
     
-    vertices[219] = 1.0; vertices[220] = 2.0; vertices[221] = -2.0; // r(1,2,1)
+    vertices[219] = 1.0; vertices[220] = 2.0; vertices[221] = -2.0;
     
-    colors[219] = 0.0; colors[220] = 1.0; colors[221] = 0.0; // Bottom left corner
+    colors[219] = 1.0; colors[220] = 1.0; colors[221] = 0.0;
     
-    vertices[222] = 3.0; vertices[223] = 1.0; vertices[224] = -2.0; // l(3,1,1)
+    vertices[222] = 3.0; vertices[223] = 1.0; vertices[224] = -2.0;
     
-    colors[222] = 0.0; colors[223] = 0.0; colors[224] = 1.0; // Bottom left corner
+    colors[222] = 1.0; colors[223] = 0.0; colors[224] = 1.0;
     
     
     
-    vertices[225] = 1.0; vertices[226] = 2.0; vertices[227] = -2.0; // r(1,2,1)
+    vertices[225] = 1.0; vertices[226] = 2.0; vertices[227] = -2.0;
     
-    colors[225] = 1.0; colors[226] = 0.0; colors[227] = 0.0; // Bottom left corner
+    colors[225] = 0.0; colors[226] = 0.0; colors[227] = 0.0;
     
-    vertices[228] = 3.0; vertices[229] = 1.0; vertices[230] = -2.0; // l(3,1,1)
+    vertices[228] = 3.0; vertices[229] = 1.0; vertices[230] = -2.0;
     
-    colors[228] = 0.0; colors[229] = 1.0; colors[230] = 0.0; // Bottom left corner
+    colors[228] = 1.0; colors[229] = 1.0; colors[230] = 0.0;
     
-    vertices[231] = 1.0; vertices[232] = 2.0; vertices[233] = -3.0; // s(1,2,0)
+    vertices[231] = 1.0; vertices[232] = 2.0; vertices[233] = -3.0;
     
-    colors[231] = 0.0; colors[232] = 0.0; colors[233] = 1.0; // Bottom left corner
+    colors[231] = 1.0; colors[232] = 0.0; colors[233] = 1.0;
     
     
-    vertices[234] = 3.0; vertices[235] = 1.0; vertices[236] = -2.0; // l(3,1,1)
+    vertices[234] = 3.0; vertices[235] = 1.0; vertices[236] = -2.0;
     
-    colors[234] = 1.0; colors[235] = 0.0; colors[236] = 0.0; // Bottom left corner
+    colors[234] = 0.0; colors[235] = 0.0; colors[236] = 0.0;
     
-    vertices[237] = 1.0; vertices[238] = 2.0; vertices[239] = -3.0; // s(1,2,0)
+    vertices[237] = 1.0; vertices[238] = 2.0; vertices[239] = -3.0;
     
-    colors[237] = 0.0; colors[238] = 1.0; colors[239] = 0.0; // Bottom left corner
+    colors[237] = 1.0; colors[238] = 1.0; colors[239] = 0.0;
     
-    vertices[240] = 3.0; vertices[241] = 1.0; vertices[242] = -3.0; // k(3,1,0)
+    vertices[240] = 3.0; vertices[241] = 1.0; vertices[242] = -3.0;
     
-    colors[240] = 0.0; colors[241] = 0.0; colors[242] = 1.0; // Bottom left corner
+    colors[240] = 1.0; colors[241] = 0.0; colors[242] = 1.0;
     
     
     
-    vertices[243] = 1.0; vertices[244] = 2.0; vertices[245] = -3.0; // s(1,2,0)
+    vertices[243] = 1.0; vertices[244] = 2.0; vertices[245] = -3.0;
     
-    colors[243] = 1.0; colors[244] = 0.0; colors[245] = 0.0; // Bottom left corner
+    colors[243] = 0.0; colors[244] = 0.0; colors[245] = 0.0;
     
-    vertices[246] = 3.0; vertices[247] = 1.0; vertices[248] = -3.0; // k(3,1,0)
+    vertices[246] = 3.0; vertices[247] = 1.0; vertices[248] = -3.0;
     
-    colors[246] = 0.0; colors[247] = 1.0; colors[248] = 0.0; // Bottom left corner
+    colors[246] = 0.0; colors[247] = 1.0; colors[248] = 1.0;
     
-    vertices[249] = 1.0; vertices[250] = 1.0; vertices[251] = -3.0; // m(1,1,0)
+    vertices[249] = 1.0; vertices[250] = 1.0; vertices[251] = -3.0;
     
-    colors[249] = 0.0; colors[250] = 0.0; colors[251] = 1.0; // Bottom left corner
+    colors[249] = 0.0; colors[250] = 0.0; colors[251] = 0.0;
     
     
     
-    vertices[252] = 3.0; vertices[253] = 0.0; vertices[254] = -3.0; // j(3,0,0)
+    vertices[252] = 3.0; vertices[253] = 0.0; vertices[254] = -3.0;
     
-    colors[252] = 1.0; colors[253] = 0.0; colors[254] = 0.0; // Bottom left corner
+    colors[252] = 1.0; colors[253] = 0.0; colors[254] = 1.0;
     
-    vertices[255] = 3.0; vertices[256] = 0.0; vertices[257] = -2.0; // i(3,0,1)
+    vertices[255] = 3.0; vertices[256] = 0.0; vertices[257] = -2.0;
     
-    colors[255] = 0.0; colors[256] = 1.0; colors[257] = 0.0; // Bottom left corner
+    colors[255] = 0.0; colors[256] = 1.0; colors[257] = 1.0;
     
-    vertices[258] = 1.0; vertices[259] = 0.0; vertices[260] = -3.0; // n(1,0,0)
+    vertices[258] = 1.0; vertices[259] = 0.0; vertices[260] = -3.0;
     
-    colors[258] = 0.0; colors[259] = 0.0; colors[260] = 1.0; // Bottom left corner
+    colors[258] = 0.0; colors[259] = 0.0; colors[260] = 0.0;
     
     
-    vertices[261] = 3.0; vertices[262] = 0.0; vertices[263] = -2.0; // i(3,0,1)
+    vertices[261] = 3.0; vertices[262] = 0.0; vertices[263] = -2.0;
     
-    colors[261] = 1.0; colors[262] = 0.0; colors[263] = 0.0; // Bottom left corner
+    colors[261] = 1.0; colors[262] = 0.0; colors[263] = 1.0;
     
-    vertices[264] = 1.0; vertices[265] = 0.0; vertices[266] = -3.0; // n(1,0,0)
+    vertices[264] = 1.0; vertices[265] = 0.0; vertices[266] = -3.0;
     
-    colors[264] = 0.0; colors[265] = 1.0; colors[266] = 0.0; // Bottom left corner
+    colors[264] = 0.0; colors[265] = 1.0; colors[266] = 1.0;
     
-    vertices[267] = 1.0; vertices[268] = 0.0; vertices[269] = -2.0; // g(1,0,1)
+    vertices[267] = 1.0; vertices[268] = 0.0; vertices[269] = -2.0;
     
-    colors[267] = 0.0; colors[268] = 0.0; colors[269] = 1.0; // Bottom left corner
+    colors[267] = 0.0; colors[268] = 0.0; colors[269] = 0.0;
     
     
     
@@ -785,7 +785,7 @@ void renderPolygonModel(void)
     glDrawArrays(GL_TRIANGLES, 0, 90);
     // Unbind our Vertex Array Object
     glBindVertexArray(0);
-
+    
 }
 
 
