@@ -481,7 +481,7 @@ void GLSphereYellow::initShader(void)
     // define the position of the light and send the light position to your shader program
     _light_source0._lightPos = glm::vec4(15.0,7.0,12.0,0.0);
     _light_source0._ambient_intensity = 0.3;
-    _light_source0._specular_intensity = 0.2;
+    _light_source0._specular_intensity = 0.3;
     _light_source0._diffuse_intensity = 2.3;
     _light_source0._cone_angle = 32.0; // in degree
     _light_source0._cone_direction = glm::vec3(0.0, 0.0, -1.0);

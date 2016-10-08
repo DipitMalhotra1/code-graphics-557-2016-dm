@@ -481,8 +481,8 @@ void GLSphereGreen::initShader(void)
     // define the position of the light and send the light position to your shader program
     _light_source0._lightPos = glm::vec4(100.0,0.0,100.0,1.0);
     _light_source0._ambient_intensity = 0.0;
-    _light_source0._specular_intensity = 10.0;
-    _light_source0._diffuse_intensity = 20.0;
+    _light_source0._specular_intensity = 11.0;
+    _light_source0._diffuse_intensity = 21.0;
     _light_source0._cone_angle = 35.0; // in degree
     _light_source0._cone_direction = glm::vec3(0.0, 0.0, -1.0);
     

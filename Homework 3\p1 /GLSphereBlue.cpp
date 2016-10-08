@@ -471,7 +471,7 @@ void GLSphereBlue::initShader(void)
     
     // define the position of the light and send the light position to your shader program
     _light_source0._lightPos = glm::vec4(100.0,0.0,100.0,1.0);
-    _light_source0._ambient_intensity = 0.5;
+    _light_source0._ambient_intensity = 0.4;
     _light_source0._specular_intensity = 0.0;
     _light_source0._diffuse_intensity = 1.0;
     

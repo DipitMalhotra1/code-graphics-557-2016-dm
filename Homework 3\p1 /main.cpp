@@ -80,7 +80,7 @@ int main(int argc, const char * argv[])
     //// Main render loop
     
     // Set up our green background color
-    static const GLfloat clear_color[] = { 0.0f, 0.0f, 0.0f, 1.0f };
+    static const GLfloat clear_color[] = { 1.0f, 1.0f, 1.0f, 1.0f };
     static const GLfloat clear_depth[] = { 1.0f, 1.0f, 1.0f, 1.0f };
     
     // This sets the camera to a new location
