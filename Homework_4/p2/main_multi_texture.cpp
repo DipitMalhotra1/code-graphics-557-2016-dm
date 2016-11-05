@@ -74,7 +74,7 @@ int main(int argc, const char * argv[])
     
     
     // create an apperance object.
-    GLAppearance* apperance_0 = new GLAppearance("/Users/dipit/Documents/code-graphics-557-2016-dm/Homework 4/data/shaders/multi_texture.vs", "/Users/dipit/Documents/code-graphics-557-2016-dm/Homework 4/data/shaders/multi_texture.fs");
+    GLAppearance* apperance_0 = new GLAppearance("/Users/dipit/Documents/code-graphics-557-2016-dm/Homework_4/p2/data/shaders/multi_texture.vs", "/Users/dipit/Documents/code-graphics-557-2016-dm/Homework_4/p2/data/shaders/multi_texture.fs");
     
     GLDirectLightSource  light_source;
     light_source._lightPos = glm::vec4(0.0,10.0,100.0, 0.0);
@@ -113,7 +113,7 @@ int main(int argc, const char * argv[])
     //************************************************************************************************
     // Add a texture
     GLMultiTexture* texture = new GLMultiTexture();
-    int texid = texture->loadAndCreateTextures("/Users/dipit/Documents/code-graphics-557-2016-dm/Homework 4/data/textures/test.bmp", "/Users/dipit/Documents/code-graphics-557-2016-dm/Homework 4/data/textures/1gradient.bmp","/Users/dipit/Documents/code-graphics-557-2016-dm/Homework 4/data/textures/bird.bmp");
+    int texid = texture->loadAndCreateTextures("/Users/dipit/Documents/code-graphics-557-2016-dm/Homework_4/p2/data/textures/test.bmp", "/Users/dipit/Documents/code-graphics-557-2016-dm/Homework_4/p2/data/textures/1gradient.bmp","/Users/dipit/Documents/code-graphics-557-2016-dm/Homework_4/p2/data/textures/bird.bmp");
     //int texid = texture->loadAndCreateTexture("../../data/textures/texture_earth_128x128_a.bmp");
     apperance_0->setTexture(texture);
     

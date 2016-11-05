@@ -161,7 +161,7 @@ GLSphere::GLSphere(float center_x, float center_y, float center_z, float radius,
     
     initShader();
     initVBO();
-    
+
     initShaderNormal();
     initVBONormals();
 }
@@ -184,13 +184,13 @@ GLSphere::~GLSphere()
  */
 void GLSphere::draw(void)
 {
-    
+ 
     //////////////////////////////////////////////////
     // Renders the sphere
     
     // Enable the shader program
     glUseProgram(_program);
-    
+
     // this changes the camera location
     glm::mat4 rotated_view =  rotatedViewMatrix();
     glUniformMatrix4fv(_viewMatrixLocation, 1, GL_FALSE, &rotated_view[0][0]); // send the view matrix to our shader
@@ -209,14 +209,14 @@ void GLSphere::draw(void)
     
     if(_render_normal_vectors)
     {
-        
+    
         // Enable the shader program
         glUseProgram(_program_normals);
-        
+    
         glUniformMatrix4fv(_viewMatrixLocationN, 1, GL_FALSE, &rotated_view[0][0]); // send the view matrix to our shader
         glUniformMatrix4fv(_modelMatrixLocationN, 1, GL_FALSE, &_modelMatrix[0][0]); //
-        
-        
+    
+    
         // Bind the buffer and switch it to an active buffer
         glBindVertexArray(_vaoIDNormals[0]);
         glDrawArrays(GL_LINES, 0, _num_vertices_normals);
@@ -257,7 +257,7 @@ void GLSphere::enableNormalVectorRenderer(bool value )
  */
 void GLSphere::initVBO(void)
 {
-    
+
     
     _spherePoints.clear();
     _normalVectors.clear();
@@ -349,7 +349,7 @@ void GLSphere::initVBONormals(void)
     
     float *normal_lines = new float[normalVectorLines.size() * 3];
     float *colors = new float[normalVectorLines.size() * 3];
-    
+
     for(int i=0; i<normalVectorLines.size() ; i++)
     {
         normal_lines[(i*3)] = normalVectorLines[i].x();
@@ -444,14 +444,14 @@ void GLSphere::initShader(void)
     glUniformMatrix4fv(projectionMatrixLocation, 1, GL_FALSE, &projectionMatrix()[0][0] ); // Send our projection matrix to the shader
     glUniformMatrix4fv(_viewMatrixLocation, 1, GL_FALSE, &viewMatrix()[0][0]); // Send our view matrix to the shader
     glUniformMatrix4fv(_modelMatrixLocation, 1, GL_FALSE, &_modelMatrix[0][0]); // Send our model matrix to the shader
-    glUniformMatrix4fv(_inverseViewMatrixLocation, 1, GL_FALSE, &invRotatedViewMatrix()[0][0]);
+     glUniformMatrix4fv(_inverseViewMatrixLocation, 1, GL_FALSE, &invRotatedViewMatrix()[0][0]);
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // Material
-    _material._diffuse_material = glm::vec3(1.0, 0.0, 0.0);
-    _material._ambient_material = glm::vec3(1.0, 0.0, 0.0);
+    _material._diffuse_material = glm::vec3(1.0, 0.5, 0.0);
+    _material._ambient_material = glm::vec3(1.0, 0.5, 0.0);
     _material._specular_material = glm::vec3(1.0, 1.0, 1.0);
-    _material._shininess = 150.0;
+    _material._shininess = 12.0;
     
     
     _material._ambientColorPos = glGetUniformLocation(_program, "ambient_color");
@@ -470,19 +470,19 @@ void GLSphere::initShader(void)
     // Light
     
     // define the position of the light and send the light position to your shader program
-    _light_source0._lightPos = glm::vec4(100.0,0.0,100.0,1.0);
-    _light_source0._ambient_intensity = 0.7;
+    _light_source0._lightPos = glm::vec4(50.0,50.0,0.0,1.0);
+    _light_source0._ambient_intensity = 0.5;
     _light_source0._specular_intensity = 1.0;
     _light_source0._diffuse_intensity = 1.0;
+ 
     
-    
-    
+
     _light_source0._ambientIdx = glGetUniformLocation(_program, "ambient_intensity");
     _light_source0._diffuseIdx = glGetUniformLocation(_program, "diffuse_intensity");
     _light_source0._specularIdx = glGetUniformLocation(_program, "specular_intensity");
+   
     
-    
-    
+
     // Send the light information to your shader program
     glUniform1f(_light_source0._ambientIdx, _light_source0._ambient_intensity );
     glUniform1f(_light_source0._diffuseIdx, _light_source0._diffuse_intensity);
@@ -499,7 +499,7 @@ void GLSphere::initShader(void)
     
     
     
-    glUseProgram(0);
+     glUseProgram(0);
     
 }
 
@@ -526,7 +526,7 @@ void GLSphere::initShaderNormal(void)
     
     glBindAttribLocation(_program_normals, 0, "in_Position");
     glBindAttribLocation(_program_normals, 1, "in_Color");
-    
+
     glUseProgram(0);
 }
 

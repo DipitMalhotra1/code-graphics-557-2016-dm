@@ -3,7 +3,7 @@
 //  OpenGL_Transformations
 //
 //  Created by Rafael Radkowski on 9/12/15.
-//
+//  Team members - Jiale Feng, Geethanjali Jeevanatham, Chloe McPherson
 //
 
 #pragma once
