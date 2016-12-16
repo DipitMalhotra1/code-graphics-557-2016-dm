@@ -10,9 +10,10 @@
 #include <iostream>
 #include <string>
 
+
 // GLEW include
 #include <GL/glew.h>
-
+#include<GL/glut.h>
 // GLM include files
 #define GLM_FORCE_INLINE
 #include <glm/glm.hpp>
